@@ -6,21 +6,21 @@ public class main {
 
         int nUserNum1, nUserNum2, nUserNum3, nResult = 0;
 
-        nUserNum1 = getInput("Enter a number ");
+        nUserNum1 = getInput("Enter a number ");//calling function
         System.out.println("The first number is " + nUserNum1);
 
-        nUserNum2 = getInput("Enter another number ");
+        nUserNum2 = getInput("Enter another number ");//calling function
         System.out.println("The second number is " + nUserNum2);
 
-        nUserNum3 = getInput("Enter a third number ");
+        nUserNum3 = getInput("Enter a third number ");//calling function
         System.out.println("The third number is " + nUserNum3);
 
-        nResult = bigger(nUserNum1, nUserNum2, nUserNum3);
+        nResult = bigger(nUserNum1, nUserNum2, nUserNum3);//calling function
 
 
         System.out.println(nResult + " is the bigger number.");
 
-
+        arrayTest();//calling function
 
 
 
@@ -37,7 +37,7 @@ public class main {
         return nItem;
 
     }
-
+    //Function
     public static int bigger(int num1, int num2){
         int result;
 
@@ -50,7 +50,7 @@ public class main {
 
         return result;
     }
-
+    //overloading the function is A OK!
     public static int bigger(int num1, int num2, int num3){
         int result;
 
@@ -65,6 +65,33 @@ public class main {
 
         return result;
     }
+    //arrays
+    public static void arrayTest (){
+        int [] aNumber; //declaration
+        aNumber = new int[10]; // init, setting the array to be 10 spaces large. 0-9
 
+        //int [] aNumber1 = new int[10]; //Same thing as above but shorter
+
+       // int aNumber2 [] = new int[10];//same thing as above
+
+        aNumber [0] = 1; //sets the first section of the array to 5
+        aNumber [9] = 10; // sets the last section of the array to 10
+
+        //prints the array
+        for(int i = 0; i < aNumber.length; i++){
+            System.out.println("Array element is :" + aNumber[i]);
+        }
+
+
+    }
+
+    //checkerboard array
+    public static void dblArray(){
+        int [][] aMultiArray = new int [5][6];
+
+        aMultiArray[3][4] = 50; //sets column 3 line 4 = 50
+
+
+    }
 
 }
